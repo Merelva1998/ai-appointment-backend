@@ -1,0 +1,27 @@
+{
+  "user_id": "merel@example.com",
+  "notifications": ["email", "popup"],
+  "confirm_required": false,
+  "google_calendar_linked": false,
+  "manual_blocks": [
+    "2025-06-22T18:00",
+    "2025-06-23T12:00"
+  ],
+  "office_hours": {
+    "start": 9,
+    "end": 17,
+    "days": ["monday", "tuesday", "wednesday", "thursday", "friday"]
+  },
+  "default_appointment_duration": 60,
+  "auto_confirm_duration_limit": 30,
+  "timezone": "Europe/Amsterdam",
+  "subscription_active": true,
+  "subscription_expires": "2025-12-31",
+  "max_appointments_per_day": 8,
+  "buffer_time_minutes": 15,
+  "custom_responses": {
+    "confirmation": "Bedankt voor uw afspraakverzoek! Ik heb de volgende tijd voor u gereserveerd:",
+    "conflict": "De door u voorgestelde tijd is helaas niet beschikbaar. Zou een van deze alternatieven uitkomen:",
+    "out_of_hours": "Uw voorgestelde tijd valt buiten onze kantooruren (9:00-17:00, maandag-vrijdag)."
+  }
+}

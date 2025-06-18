@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instellingen</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .setting-group { margin-bottom: 20px; }
+        label { margin-right: 10px; }
+        input[type=checkbox] { transform: scale(1.2); margin-right: 8px; }
+        .button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        .button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Gebruikersinstellingen</h1>
+
+    <form method="POST" action="/update-settings">
+        <div class="setting-group">
+            <label><input type="checkbox" name="require_confirmation" {% if user_settings.require_confirmation %}checked{% endif %}>Bevestiging vereist voor elke afspraak</label>
+        </div>
+
+        <div class="setting-group">
+            <strong>Notificaties ontvangen via:</strong><br>
+            <label><input type="checkbox" name="notify_email" {% if user_settings.notify_email %}checked{% endif %}>E-mail</label><br>
+            <label><input type="checkbox" name="notify_popup" {% if user_settings.notify_popup %}checked{% endif %}>Pop-up melding</label><br>
+            <label><input type="checkbox" name="notify_sms" {% if user_settings.notify_sms %}checked{% endif %}>SMS</label>
+        </div>
+
+        <button class="button" type="submit">Opslaan</button>
+    </form>
+</body>
+</html>
